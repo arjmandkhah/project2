@@ -1,0 +1,63 @@
+@import"./mixin";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: Lalezar;
+}
+@font-face {
+    font-family: Lalezar;
+    src: url(../font/Lalezar-Font/OTF/Lalezar-Regular.otf);
+}
+@font-face {
+    font-family: dalal;
+    src: url(../font/Far_Dalal/Far_Dalal.ttf);
+}
+div.row>div.parent{
+    background-color: $bg-color-1;
+}
+div.card-1{
+    // height: 80vh;
+    @include card(null,80vh);
+    background-color: $bg-color-1;
+    >.card-body{
+        position: absolute;
+        top: 150px;
+        right: 80px;
+        >.card-title{
+           margin: 20px auto;
+           color: $color;
+           font-family: dalal;
+        }
+      
+        >.card-text{
+        //   width: 50%;
+          @include card(50%,null);
+          line-height: 30px;
+          color: $color;
+        }
+}
+}
+.nav.nav-tabs{
+    background-color: $color-2;
+direction: ltr;
+>.nav-item>.nav-link{
+    margin: 10px 0px;
+    font-size: 50px;
+    margin-right: 250px;
+    border-radius: 8px;
+}
+>.nav-item>.nav-link>.fa-brands{
+    padding: 10px;
+    // position: absolute;
+    font-size: 50px;
+// margin-left: 500px;
+// .fa-telegram{
+//     // position: absolute;
+//     right: 300px;
+
+}
+}
+
+

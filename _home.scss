@@ -1,0 +1,51 @@
+@import"./mixin";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: Lalezar;
+}
+@font-face {
+    font-family: Lalezar;
+    src: url(../font/Lalezar-Font/OTF/Lalezar-Regular.otf);
+}
+@font-face {
+    font-family: dalal;
+    src: url(../font/Far_Dalal/Far_Dalal.ttf);
+}
+div.row>div.parent{
+    background-color: $bg-color-1;
+}
+div.card{
+    
+    // height: 100vh;
+    @include card(null,100vh);
+    position: relative;
+    background-image: url('../img/beautiful-shot-top-mountain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    >.card-body{
+     position: absolute;
+     top: 150px;
+     right: 80px;
+     >.card-title{
+        margin: 20px auto;
+        color: $color;
+        font-family: dalal;
+     }
+   
+     >.card-text{
+    //    width: 50%;
+    @include card(50%,null);
+   line-height: 30px;
+       color: $color;
+     }
+     >.btn{
+        background-color: rgba($color: #000000, $alpha: 0.0);
+        margin: 50px auto;
+        border-color: $color;
+     }
+    }
+}

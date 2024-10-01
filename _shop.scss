@@ -1,0 +1,65 @@
+@import"./mixin";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: Lalezar;
+}
+@font-face {
+    font-family: Lalezar;
+    src: url(../font/Lalezar-Font/OTF/Lalezar-Regular.otf);
+}
+@font-face {
+    font-family: dalal;
+    src: url(../font/Far_Dalal/Far_Dalal.ttf);
+}
+div.row{
+    background-color: $bg-color-1;
+}
+div.row>div.parent>div.alert.alert-success {
+    background-color: $bg-color-1;
+    border: none;
+    // height: 250px;
+    @include card(100%,250px);
+    >.alert-heading{
+        font-family: dalal;
+    }
+}
+div.row>div.parent>div.d-flex>div.square{
+align-items: center;
+  padding: 30px;
+@include card(250px,250px);
+background-color: $color;
+  color: $color-1;
+ margin: 20px auto;
+ position: relative;
+ >h2{
+    margin-top: 70px;
+    >span{
+    padding: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+ }}
+
+}
+div.row>div.parent>div.text{
+    padding: 5px;
+    color: $color-2;
+    text-align: justify;
+    align-items: center;
+    >p{
+        // width: 28%;
+        @include card(28%,null);
+        margin: 20px 30px;
+        overflow-y: hidden;
+    }
+}
+div.row>div.parent>div.button{
+    padding: 20px;
+        margin-right: 500px;
+   
+ 
+    // @extend%btn;
+}

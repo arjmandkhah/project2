@@ -1,0 +1,48 @@
+@import "./variable";
+@import "./home";
+@import "./shop";
+@import "./about";
+@import "./contact";
+@import"./mixin";
+@import "./extend";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: Lalezar;
+}
+@font-face {
+    font-family: Lalezar;
+    src: url(../font/Lalezar-Font/OTF/Lalezar-Regular.otf);
+}
+@font-face {
+    font-family: dalal;
+    src: url(../font/Far_Dalal/Far_Dalal.ttf);
+}
+div.row{
+    background-color: $bg-color-1;
+}
+.navbar{
+    padding: 0px;
+    >.container-fluid{
+    >.navbar-brand{
+        margin-left:600px;
+    }
+    >.collapse>.navbar-nav>.nav-link{
+        padding: 10px;
+        >.fa-solid{
+                margin: 0px 20px;
+    }
+    }
+}
+    >.border{
+        background-color: $bg-color;
+        margin: 0px;
+        padding: 0;
+        >.navbar-brand{
+    margin-right: 100px;
+        }
+    }    
+}
+
